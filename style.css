@@ -165,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .schedule-row {
     background-color: rgba(10, 14, 23, 0.6);
+    flex-wrap: wrap;
 }
 
 .schedule-row:hover,
@@ -176,6 +177,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 800;
+    display: flex;
+    align-items: center;
 }
 
 .dj-info {
@@ -183,6 +186,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .dj-info img {
@@ -190,12 +196,21 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     object-fit: cover;
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .stage {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .schedule-row:hover .btn-primary,
@@ -411,13 +426,213 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
         padding: 0.5rem 0;
     }
+    
+    /* Schedule table responsive */
+    .schedule-table {
+        padding: 0 !important;
+    }
+    
+    .schedule-row {
+        padding: 1rem !important;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .schedule-row > div {
+        width: 100% !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .time {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .dj-info {
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .stage {
+        font-size: 1rem;
+        margin-top: 0.5rem !important;
+    }
+    
+    .actions {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 0.75rem !important;
+        gap: 0.5rem;
+    }
+    
+    .btn-custom-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
 }
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .schedule-row {
+        padding: 1rem !important;
+    }
+    
+    .dj-info img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .time {
+        font-size: 1.1rem;
+    }
+    
+    .dj-info {
+        font-size: 0.95rem;
+    }
+    
+    .hero-stats {
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        font-size: 0.85rem;
+    }
+    
+    .ticket-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .ticket-price {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 575px) {
     .hero-title {
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
     }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
     .hero-stats .stat-item {
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .logo-text {
+        display: none;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem !important;
+    }
+    
+    /* Schedule table para mobile */
+    .schedule-table {
+        border-radius: 0.5rem;
+    }
+    
+    .schedule-table .row:first-child {
+        display: none;
+    }
+    
+    .schedule-row {
+        padding: 0.75rem !important;
+        gap: 0;
+    }
+    
+    .schedule-row > div {
+        padding: 0 !important;
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .schedule-row > div:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .time {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary-pink);
+    }
+    
+    .dj-info {
         font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+    
+    .dj-info img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .dj-info span {
+        display: block;
+        flex-grow: 1;
+    }
+    
+    .stage {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+    }
+    
+    .stage::before {
+        content: "Escenario: ";
+        font-weight: 700;
+        color: var(--text-light);
+    }
+    
+    .actions {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .btn-custom-sm {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .ticket-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .ticket-type {
+        font-size: 1.8rem;
+    }
+    
+    .ticket-price {
+        font-size: 2rem;
+    }
+    
+    .sponsor-logo {
+        width: 100%;
+        min-height: 100px;
+    }
+    
+    .dj-img {
+        height: 250px;
+        width: 100%;
     }
 }
 
@@ -427,5 +642,170 @@ h1, h2, h3, h4, h5, h6 {
     }
     .shadow-lg-none {
         box-shadow: none !important;
+    }
+}
+
+/* Estilos responsivos adicionales */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mejorar padding en contenedores */
+@media (max-width: 991px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .px-4 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    .py-4, .py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    .px-4, .px-5 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    
+    .mb-3, .mb-4, .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    
+    .gap-4, .gap-5 {
+        gap: 1rem !important;
+    }
+}
+
+/* Estilos para secciones hero pequeñas */
+.hero-small {
+    min-height: 30vh;
+}
+
+@media (max-width: 768px) {
+    .hero-small {
+        min-height: 25vh;
+    }
+    
+    .hero-small h1 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-small {
+        min-height: 20vh;
+    }
+    
+    .hero-small h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+    }
+    
+    .hero-small .text-cyan {
+        display: block;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mejorar tablas de contenido */
+.blog-content {
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .blog-content {
+        font-size: 0.95rem;
+    }
+    
+    .blog-content p {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Galería de DJs responsiva */
+.djs-grid {
+    overflow-x: auto;
+}
+
+@media (max-width: 991px) {
+    .djs-grid .row {
+        row-gap: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .djs-grid .row {
+        row-gap: 1.5rem;
+    }
+    
+    .djs-grid h4 {
+        font-size: 1.1rem;
+    }
+    
+    .djs-grid p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras para contact section */
+@media (max-width: 768px) {
+    .contact .row {
+        gap: 2rem;
+    }
+    
+    .contact h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mejorar botones responsivos en mobile */
+@media (max-width: 575px) {
+    .btn {
+        width: 100%;
+    }
+    
+    .btn + .btn {
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Transición suave deshabilitada en móvil para mejor rendimiento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }

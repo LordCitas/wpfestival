@@ -23,8 +23,8 @@ get_header(); ?>
               <p class="hero-subtitle mb-5" style="font-size: 1.1rem; font-weight: 500; line-height: 1.8; max-width: 600px;">
                 Bogota WP Festival Music es un Evento de musica<br>electronica con DJS que estan dentro del Top 20 en el<br>mundo, Luces, buena musica y mejores Djs
               </p>
-              
-              <button class="btn btn-primary btn-custom rounded-pill fw-bold text-capitalize">Comprar Tickets</button>
+            
+              <a href="<?php echo esc_url(home_url('#tickets')); ?>" class="btn btn-primary btn-custom rounded-pill fw-bold text-capitalize">Comprar Tickets</a>
           </div>
         </div>
       </section>
@@ -58,7 +58,7 @@ get_header(); ?>
                       </div>
                   </div>
                   
-                  <div class="row gx-0 py-4 px-4 align-items-center border-bottom border-light border-opacity-10 schedule-row active transition-colors bg-pink">
+                  <div class="row gx-0 py-4 px-4 align-items-center border-bottom border-light border-opacity-10 schedule-row transition-colors">
                       <div class="col-3 col-md-1 time text-white">23:00</div>
                       <div class="col-9 col-md-5 dj-info text-white">
                           <img src="<?php echo get_template_directory_uri(); ?>/images/dj_avatar_1773052136651.png" alt="DJ Monza">
@@ -66,8 +66,8 @@ get_header(); ?>
                       </div>
                       <div class="col-12 col-md-3 stage text-white mt-3 mt-md-0">Principal</div>
                       <div class="col-12 col-md-3 actions justify-content-start justify-content-md-end mt-3 mt-md-0">
-                          <button class="btn btn-outline-light rounded-pill fw-bold text-white btn-custom-sm">Detalles</button>
-                          <button class="btn btn-light rounded-pill fw-bold text-pink btn-custom-sm ms-2" style="color: var(--primary-pink)">Tickets</button>
+                          <button class="btn btn-outline btn-custom-sm">Detalles</button>
+                          <button class="btn btn-primary btn-custom-sm ms-2">Tickets</button>
                       </div>
                   </div>
               </div>
@@ -173,7 +173,7 @@ get_header(); ?>
                               <li class="mb-2"><i class="fa-solid fa-square text-white opacity-50 me-2"></i> Camiseta - 3 bebidas</li>
                               <li class="mb-2"><i class="fa-solid fa-square text-white opacity-50 me-2"></i> Acceso zona VIP</li>
                           </ul>
-                          <button class="btn btn-light text-pink w-100 rounded-pill mt-auto fw-bold" style="color: var(--primary-pink);">Comprar Tickets</button>
+                          <button class="btn btn-primary btn-custom w-100 rounded-pill mt-auto fw-bold">Comprar Tickets</button>
                       </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">

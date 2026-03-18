@@ -55,7 +55,7 @@ get_header(); ?>
                       </div>
                   </div>
                   
-                  <div class="row gx-0 py-4 px-4 align-items-center border-bottom border-light border-opacity-10 schedule-row active transition-colors bg-pink">
+                  <div class="row gx-0 py-4 px-4 align-items-center border-bottom border-light border-opacity-10 schedule-row transition-colors">
                       <div class="col-3 col-md-1 time text-white">23:00</div>
                       <div class="col-9 col-md-5 dj-info text-white">
                           <img src="<?php echo get_template_directory_uri(); ?>/images/dj_performance_1_1773052150108.png" alt="DJ Monza">
@@ -63,8 +63,8 @@ get_header(); ?>
                       </div>
                       <div class="col-12 col-md-3 stage text-white mt-3 mt-md-0">Principal</div>
                       <div class="col-12 col-md-3 actions justify-content-start justify-content-md-end mt-3 mt-md-0">
-                          <button class="btn btn-outline-light rounded-pill fw-bold text-white btn-custom-sm">Detalles</button>
-                          <button class="btn btn-light rounded-pill fw-bold text-pink btn-custom-sm ms-2" style="color: var(--primary-pink)">Tickets</button>
+                          <button class="btn btn-outline btn-custom-sm">Detalles</button>
+                          <button class="btn btn-primary btn-custom-sm ms-2">Tickets</button>
                       </div>
                   </div>
                   
